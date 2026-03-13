@@ -39,7 +39,7 @@ class RagSummarizeService(object):
             context += f"【参考资料{count}】: 参考资料: {doc.page_content} | 参考元数据: {doc.metadata}\n"
         return self.chain.invoke(
             {
-                "input": query,
+                "query": query,
                 "context": context,
             }
         )
